@@ -1,0 +1,10 @@
+set_atc_time:
+  description: Send time to device.
+  fields:
+    device_address:
+      name: Device address
+      description: Device BT address.
+      required: true
+      example: A4:C1:38:63:21:1D
+      selector:
+        text:

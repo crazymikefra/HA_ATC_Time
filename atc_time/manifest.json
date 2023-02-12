@@ -1,0 +1,7 @@
+{
+	"domain": "atc_time",
+	"name": "ATC Time Sync",
+	"requirements": ["bleak==0.19.5"],
+	"iot_class": "assumed_state",
+	"version": "0.1.0"
+}
