@@ -26,7 +26,8 @@ def setup(hass, config):
                     LOGGER.debug("Connecting to : %s",bt_address)
                     await client.connect()
 
-                    timestamp = time.time() + (time.daylight * 3600)
+                    #timestamp = time.time() + (time.daylight * 3600)
+                    timestamp = time.time() + time.mktime(time.localtime()) - time.mktime(time.gmtime()) + (time.daylight * 3600)
                     
                     blk = []
                     blk.append(int("23",16))
