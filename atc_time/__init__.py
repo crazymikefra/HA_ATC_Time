@@ -14,7 +14,7 @@ def setup(hass, config):
         """Handle the service call."""
         bt_address = call.data.get("device_address", "")
        
-        client = BleakClient(bt_address)
+        client = BleakClient(bt_address,None,None,30)
         
         
         bOk=False
@@ -41,13 +41,11 @@ def setup(hass, config):
                     LOGGER.debug("Answer to write %s",retour)
                     bOk = True
                     time.sleep(1)
+                    LOGGER.debug("Disconnecting")
+                    await client.disconnect()
                 except Exception as e:
                     LOGGER.debug(e)
                     time.sleep(1)
-                finally:
-                    LOGGER.debug("Disconnecting")
-                    await client.disconnect()
-        
 
     hass.services.register("atc_time", "set_atc_time", handle_atc_time)
 
