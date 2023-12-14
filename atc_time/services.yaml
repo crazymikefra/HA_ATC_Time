@@ -8,3 +8,27 @@ set_atc_time:
       example: A4:C1:38:63:21:1D
       selector:
         text:
+    wait_time:
+      name: Wait Time
+      description: Time to wait device (s).
+      required: true
+      example: 60
+      selector:
+        number:
+get_characteristics:
+  description: Get characteristics from device.
+  fields:
+    device_address:
+      name: Device address
+      description: Device BT address.
+      required: true
+      example: A4:C1:38:63:21:1D
+      selector:
+        text:
+    wait_time:
+      name: Wait Time
+      description: Time to wait device (s).
+      required: true
+      example: 60
+      selector:
+        number:
