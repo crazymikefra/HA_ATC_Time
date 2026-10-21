@@ -1,34 +1,42 @@
 set_atc_time:
-  description: Send time to device.
+  name: Mettre à l'heure
+  description: Envoie l'heure locale de Home Assistant au capteur ATC.
   fields:
     device_address:
-      name: Device address
-      description: Device BT address.
+      name: Adresse Bluetooth
+      description: Adresse MAC du capteur.
       required: true
       example: A4:C1:38:63:21:1D
       selector:
         text:
     wait_time:
-      name: Wait Time
-      description: Time to wait device (s).
-      required: true
-      example: 60
+      name: Délai maximal
+      description: Durée maximale de l'opération, en secondes.
+      required: false
+      default: 30
       selector:
         number:
+          min: 5
+          max: 300
+          unit_of_measurement: s
 get_characteristics:
-  description: Get characteristics from device.
+  name: Lire les caractéristiques
+  description: Liste les services et caractéristiques GATT du capteur et renvoie leurs valeurs.
   fields:
     device_address:
-      name: Device address
-      description: Device BT address.
+      name: Adresse Bluetooth
+      description: Adresse MAC du capteur.
       required: true
       example: A4:C1:38:63:21:1D
       selector:
         text:
     wait_time:
-      name: Wait Time
-      description: Time to wait device (s).
-      required: true
-      example: 60
+      name: Délai maximal
+      description: Durée maximale de l'opération, en secondes.
+      required: false
+      default: 30
       selector:
         number:
+          min: 5
+          max: 300
+          unit_of_measurement: s
