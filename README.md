@@ -64,3 +64,7 @@ automation:
 ### `atc_time.get_characteristics`
 
 Liste les services et caractéristiques GATT du capteur et renvoie leurs valeurs (utile pour le diagnostic). À lancer depuis **Outils de développement → Actions** pour voir la réponse.
+
+## Licence
+
+Distribué sous licence MIT, voir [LICENSE](LICENSE).
