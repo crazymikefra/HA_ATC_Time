@@ -1,0 +1,11 @@
+{
+  "domain": "atc_time",
+  "name": "ATC Time Sync",
+  "codeowners": ["@crazymikefra"],
+  "dependencies": ["bluetooth"],
+  "documentation": "https://github.com/crazymikefra/HA_ATC_Time",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/crazymikefra/HA_ATC_Time/issues",
+  "requirements": [],
+  "version": "0.3.0"
+}
